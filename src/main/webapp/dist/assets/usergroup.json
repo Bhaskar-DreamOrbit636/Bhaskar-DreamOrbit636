@@ -1,0 +1,26 @@
+[{
+"id":1,
+"reminderModule": "N68920",
+"groupName": "Jaden smith",
+"role": "alan@info.com",
+"active" : true,
+"access": "9965887956",
+"groupDescription": "FIRST HOUR CHARGE TO SINTRANS FIRST HOUR CHARGE TO SINTRANS FIRST HOUR CHARGE TO SINTRANS FIRST HOUR CHARGE TO SINTRANS "
+},{
+    "id":1,
+    "reminderModule": "N68920",
+    "groupName": "Alan Walker",
+    "active" : true,
+    "role": "alan@info.com",
+    "access": "9965887956",
+    "groupDescription": "Second  HOUR CHARGE TO SINTRANS"
+    },{
+        "id":1,
+        "reminderModule": "N68920",
+        "groupName": "Som smith",
+        "role": "alan@info.com",
+        "active" : false,
+        "access": "9965887956",
+        "groupDescription": "Third HOUR CHARGE TO SINTRANS"
+        }
+]

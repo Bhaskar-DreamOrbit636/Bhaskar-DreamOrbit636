@@ -1,0 +1,127 @@
+[
+    {
+      "groupId": 1,
+      "groupRoleId": 0,
+      "groupRoleName": "PSA UG 1",
+      "status" : " PSA User Group ",
+      "grouprole_User": [
+        {
+          "Access": [
+            "Maker",
+            "Verify Contract",
+            "Notification TO",
+            "Notification CC"
+            
+          ],
+          "userId": 1,
+          "userName": "Paul",
+          "emailId" : "paul_123@psa.com"
+        },
+        {
+          "Access": [
+            "Verify Contract",
+            "Notification TO"
+          ],
+          "userId": 2,
+          "userName": "Steve",
+          "emailId" : "steve_123@psa.com"
+          
+        },
+        {
+          "Access": [
+            "Maker",
+            "Notification CC"
+          ],
+          "userId": 3,
+          "userName": "Mike",
+          "emailId" : "mike_shin@psa.com"
+          
+        }
+      ]
+    },
+    {
+      "groupId": 2,
+      "groupRoleId": 0,
+      "groupRoleName": "PSA Checkers",
+      "status" : " PSA Checkers Groups , Who cant verify any contract ",
+      "grouprole_User": [
+        {
+          "Access": [
+            "Maker",
+            "Verify Contract",
+            "Notification TO",
+            "Notification CC"
+            
+            
+          ],
+          "userId": 4,
+          "userName": "Adam",
+          "emailId" : "adamjoan@psa.com"
+          
+        },
+        {
+          "Access": [
+            "Verify Contract",
+            "Notification TO"
+            
+          ],
+          "userId": 5,
+          "userName": "Bryan",
+          "emailId" : "bryan_adams@psa.com"
+          
+        },
+        {
+          "Access": [
+            "Verify Contract",
+            "Notification CC"
+          ],
+          "userId": 6,
+          "userName": "White",
+          "emailId" : "walter_white@psa.com"
+          
+        }
+      ]
+    },
+    {
+      "groupId": 3,
+      "groupRoleId": 0,
+      "groupRoleName": "PSA Makers ",
+      "status" : " PSA Makers Groups , Who can't verify any contract ",
+      "grouprole_User": [
+        {
+          "Access": [
+            "Maker",
+            "Notification TO",
+            "Notification CC"
+            
+            
+          ],
+          "userId": 7,
+          "userName": "Steve",
+          "emailId" : "steve_smith@psa.com"
+          
+        },
+        {
+          "Access": [
+            "Notification TO"
+            
+            
+          ],
+          "userId": 8,
+          "userName": "James",
+          "emailId" : "James_hunt@psa.com"
+          
+        },
+        {
+          "Access": [
+            "Notification CC",
+                 "Verify Contract"
+          ],
+          "userId": 9,
+          "userName": "Walker",
+          "emailId" : "alen_walker@psa.com"
+          
+        }
+      ]
+    }
+  ]

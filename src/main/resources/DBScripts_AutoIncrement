@@ -1,0 +1,78 @@
+ALTER TABLE  R365 . section  
+CHANGE COLUMN  section_id   section_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365.department  
+CHANGE COLUMN  department_id   department_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . contract  
+CHANGE COLUMN  contract_id   contract_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365 . contract_config  
+CHANGE COLUMN  contract_config_id   contract_config_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . contract_has_status  
+CHANGE COLUMN  contract_has_status_id   contract_has_status_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . contract_reviewer  
+CHANGE COLUMN  contract_reviewer_id   contract_reviewer_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365 . contract_status  
+CHANGE COLUMN  Contract_Status_Id   Contract_Status_Id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . files  
+CHANGE COLUMN  file_id   file_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . group_role  
+CHANGE COLUMN  group_role_id   group_role_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365 . group_role_has_action_type  
+CHANGE COLUMN  group_role_action_type_id   group_role_action_type_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365 . group_user  
+CHANGE COLUMN  group_user_id   group_user_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365.groups  
+CHANGE COLUMN  group_id   group_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365.location  
+CHANGE COLUMN  location_id   location_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365.module_type  
+CHANGE COLUMN  Module_Type_Id   Module_Type_Id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365.record_type  
+CHANGE COLUMN  record_type_id   record_type_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365.reminder  
+CHANGE COLUMN  reminder_id   reminder_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+
+ALTER TABLE  R365.staff  
+CHANGE COLUMN  staff_id   staff_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . staff_record  
+CHANGE COLUMN  staff_record_id   staff_record_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . asset
+CHANGE COLUMN  asset_id   asset_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . asset_type
+CHANGE COLUMN  asset_type_id   asset_type_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365 . record_type
+CHANGE COLUMN  record_type_id   record_type_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ALTER TABLE  R365.user  
+CHANGE COLUMN  user_id   user_id  INT(11) NOT NULL AUTO_INCREMENT ;
+
+ 
+ 

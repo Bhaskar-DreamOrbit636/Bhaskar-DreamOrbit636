@@ -1,0 +1,57 @@
+[{
+"id":1,
+"loginID": "N68920",
+"username": "Alan smith",
+"email": "alan@info.com",
+"mobile": "9965887956",
+"remark": "FIRST HOUR CHARGE TO SINTRANS",
+"active": "Yes"
+},
+{
+"id":2,
+"loginID": "N68935",
+"username": "john Smith",
+"email": "john@info.com",
+"mobile": "9965842000",
+"remark": "SECOND HOUR CHARGE TO SINTRANS ",
+"active": "Yes"
+},
+{
+    "id":3,
+"loginID": "Q68950",
+"username": "molin clain",
+"email": "molin@info.com",
+"mobile": "9965865980",
+"remark": "THIRD HOUR CHARGE TO SINTRANS ",
+"active": "No"
+},
+{
+    "id":4,
+"loginID": "M67220",
+"username": "Markin",
+"email": "mark@info.com",
+"mobile": "9965887956",
+"remark": "FIRST HOUR CHARGE TO SINTRANS",
+"active": "Yes"
+
+},
+{
+    "id":5,
+"loginID": "L67935",
+"username": "Julien reo",
+"email": "Julien@info.com",
+"mobile": "6598745846",
+"remark": "SECOND HOUR CHARGE TO SINTRANS ",
+"active": "No"
+},
+{
+    "id":6,
+"loginID": "C60950",
+"username": "molin clain",
+"email": "molin@info.com",
+"mobile": "6598546947",
+"remark": "THIRD HOUR CHARGE TO SINTRANS ",
+"active": "No"
+}
+  
+]

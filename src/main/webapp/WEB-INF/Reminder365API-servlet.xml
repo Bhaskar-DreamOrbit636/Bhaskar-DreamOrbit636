@@ -1,0 +1,118 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/aop	
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security.xsd
+ 		http://www.springframework.org/schema/tx	
+ 		http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+	<context:component-scan base-package="com.reminder" />
+	<mvc:annotation-driven />
+	<mvc:default-servlet-handler />
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Swagger configuration -->
+	<mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+	<mvc:resources mapping="/webjars/**"
+		location="classpath:/META-INF/resources/webjars/" />
+
+	<!-- Database Configurations -->
+<!--      <bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/R365?useLegacyDatetimeCode=false" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean> -->
+	
+     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		     <property name="jndiName" value="java:/MySqlDS"  /> 
+		     <!-- <property name="jndiName" value="java:/R365"  />   -->
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+
+	<!-- Hiberante Entity Manager Configurations -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan"
+			value="com.reminder.model,com.reminder.controller,com.reminder.dao" />
+
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.event.merge.entity_copy_observer">allow</prop>
+				<prop key="jadira.usertype.autoRegisterUserTypes">true</prop>
+			</props>
+		</property>
+	</bean>
+
+ 	<bean id="contextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+
+   	  <property name="url" value="#{systemProperties['r365.spring.ldap.ldapUrl']}" />
+		<property name="userDn" value="#{systemProperties['r365.spring.ldap.managerDn']}" />
+		<property name="password" value="#{systemProperties['r365.spring.ldap.managerPassword']}" />
+		
+        <property name="baseEnvironmentProperties">
+            <map>
+                <entry key="java.naming.referral" value="follow"></entry>
+            </map>
+        </property>
+        
+	       <!--    <property name="url" value="ldap://localhost:389/dc=psa365,dc=com" 
+			/> <property name="userDn" value="cn=admin,dc=psa365,dc=com" 
+			/> <property name="password" value="root" />  -->  
+
+	</bean>
+
+  	<bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+		<constructor-arg ref="contextSource" />
+	</bean>
+
+<!--   	<security:authentication-manager erase-credentials="true">
+		<security:authentication-provider ref="ldapActiveDirectoryAuthProvider" />
+	</security:authentication-manager>
+	<bean id="ldapActiveDirectoryAuthProvider"
+		class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider">
+		<constructor-arg value="localhost" />
+		<constructor-arg value="ldap://localhost:389/dc=psa365,dc=com" />
+	</bean>
+ -->
+<!-- <ldap-server id="ldapServer" url="ldap://localhost:389"/>
+
+  <beans:bean id="bindAuthenticator" class="org.springframework.security.providers.ldap.authenticator.BindAuthenticator">
+    <beans:constructor-arg ref="ldapServer" />
+    <beans:property name="userDnPatterns">
+      <beans:list>
+        <beans:value>cn=admin,dc=psa365,dc=com</beans:value>               
+      </beans:list>
+    </beans:property>
+  </beans:bean> -->
+  
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	<tx:annotation-driven proxy-target-class="true"
+		transaction-manager="transactionManager" />
+
+	<context:property-placeholder location="classpath:application.properties" />
+</beans>

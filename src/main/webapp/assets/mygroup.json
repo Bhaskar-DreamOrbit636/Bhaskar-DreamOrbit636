@@ -1,0 +1,66 @@
+[
+{
+"id":1,
+"userid": "IDXXXX01",
+"username": "Daniel Kristee",
+"email": "DanielKristeen@gmail.com",
+"module": "Equipment",
+"usergroup": "FMD-TS",
+"role": "Administrator"
+},
+{
+"id":2,
+"userid": "IDXXXX02",
+"username": "Steven A.Good",
+"email": "StevenA.Good@gmail.com",
+"module": "Staff",
+"usergroup": "Finance",
+"role": "Officer in Charge"
+},
+
+{
+"id":3,
+"userid": "IDXXXX03",
+"username": "Smith",
+"email": "good@gmail.com",
+"module": "Staff",
+"usergroup": "Finance",
+"role": "Officer in Charge"
+},
+{
+"id":4,
+"userid": "IDXXXX04",
+"username": "Barbara B.Maxwell",
+"email": "BarbaraB.Maxwell@gmail.com",
+"module": "BarbaraB.Maxwell@gmail.com",
+"usergroup": "Equipment",
+"role": "Administrator"
+},
+{
+"id":5,
+"userid": "IDXXXX05",
+"username": "Aquirre",
+"email": "Aquirre@gmail.com",
+"module": "Equipment",
+"usergroup": "Finance",
+"role": "Administrator"
+},
+{
+"id":6,
+"userid": "IDXXXX06",
+"username": "Christine R.Hill",
+"email": "ChristineR.Hill@gmail.com",
+"module": "Equipment",
+"usergroup": "Finance",
+"role": "Officer in Charge"
+},
+{
+"id":7,
+"userid": "IDXXXX07",
+"username": "Elisabeth J. Aquirre",
+"email": "Elisabeth@gmail.com",
+"module": "Staff",
+"usergroup": "FMD-TS",
+"role": "Administrator"
+}
+]

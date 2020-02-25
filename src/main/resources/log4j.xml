@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="AppLogAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<param name="File" value="${jboss.server.log.dir}/reminder/Reminder365.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.EnhancedPatternLayout">
+			<param name="ConversionPattern" value="[%d{ISO8601}{GMT+8}] [%t] %p %l - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- The "category" represents the package names of your Application APIs 
+		which we want to log -->
+	<category name="com.reminder">
+		<level value="INFO" />
+		<appender-ref ref="AppLogAppender" />
+	</category>
+
+	<!-- <category name="org.springframework"> <level value="ALL"/> <appender-ref 
+		ref="AppLogAppender"/> </category> -->
+	<!-- <category name="org.hibernate"> <level value="ALL"/> <appender-ref 
+		ref="AppLogAppender"/> </category> -->
+	<category name="org.hibernate.SQL">
+		<level value="DEBUG" />
+		<appender-ref ref="AppLogAppender" />
+	</category>
+	<category name="org.hibernate.type">
+		<level value="DEBUG" />
+		<appender-ref ref="AppLogAppender" />
+	</category>
+
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="AppLogAppender" />
+		</Root>
+	</Loggers>
+	<!-- <root> <level value ="INFO"/> <appender-ref ref="AppLogAppender"/> 
+		</root> -->
+</log4j:configuration>
