@@ -8,7 +8,7 @@
 	<name>Reminder365 Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring.version>4.2.3.RELEASE</spring.version>
+		<spring.version>5.2.20.RELEASE</spring.version>
 		<springsecurity.version>4.2.3.RELEASE</springsecurity.version>
 		<jstl.version>1.2</jstl.version>
 		<hibernate.version>5.0.5.Final</hibernate.version>
